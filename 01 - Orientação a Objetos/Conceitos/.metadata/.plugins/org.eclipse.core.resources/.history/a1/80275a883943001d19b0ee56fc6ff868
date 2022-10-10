@@ -1,0 +1,8 @@
+package exemplo07;
+
+public class Texto {
+
+	// Atributo
+	private String palavra = "Proway";
+
+}

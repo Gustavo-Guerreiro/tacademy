@@ -1,0 +1,12 @@
+package exemplo2;
+
+public class Aluno {
+	
+	/*
+	 * DEFAULT: Não especifica o modificador
+	 * PUBLIC: 
+	 * PRIVATE: 
+	 * PROTECTED:
+	 * */
+
+}

@@ -1,0 +1,18 @@
+package exemplo05;
+
+import javax.swing.JOptionPane;
+
+@SuppressWarnings("unused")
+public class Cargo extends Colaborador {
+
+	// Atributos
+	private String cargo;
+	private double salario;
+	
+	// Método para obter o nome e a idade
+	private void obterDadosCargo() {
+		cargo = JOptionPane.showInputDialog("Informe o cargo");
+		salario = Double.parseDouble(JOptionPane.showInputDialog("Informe a salario"));
+	}
+
+}

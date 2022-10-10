@@ -1,0 +1,8 @@
+package exemplo11;
+
+public class Pessoa {
+	
+	// Atributos
+	private String nome;
+
+}

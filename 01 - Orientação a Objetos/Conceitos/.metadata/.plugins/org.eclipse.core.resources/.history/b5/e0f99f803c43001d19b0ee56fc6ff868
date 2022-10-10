@@ -1,0 +1,8 @@
+package exemplo09;
+
+public interface CalculadoraBasica {
+
+	// Método de soma
+	public int some();
+
+}

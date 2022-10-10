@@ -1,0 +1,17 @@
+package exemplo05;
+
+import javax.swing.JOptionPane;
+
+public class Colaborador {
+
+	// Atributos
+	private String nome;
+	private int idade;
+	
+	// Método para obter o nome e a idade
+	private void obterDadosColaborador() {
+		nome = JOptionPane.showInputDialog("Informe o nome");
+		idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade"));
+	}
+	
+}

@@ -1,0 +1,7 @@
+package exemplo09;
+
+public class Teste implements CalculadoraBasica {
+
+	
+
+}

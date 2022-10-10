@@ -1,0 +1,10 @@
+package exemplo03;
+
+public class Acao {
+
+	// Construtor
+	public Acao() {
+		System.out.println("Construtor executado!");
+	}
+
+}

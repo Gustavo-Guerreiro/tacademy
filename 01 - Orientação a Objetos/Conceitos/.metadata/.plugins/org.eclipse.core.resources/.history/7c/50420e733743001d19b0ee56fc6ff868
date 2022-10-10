@@ -1,0 +1,7 @@
+package exemplo06;
+
+public class Classe1 {
+	public Classe1() {
+		System.out.println("Executando a Classe1.");
+	}
+}

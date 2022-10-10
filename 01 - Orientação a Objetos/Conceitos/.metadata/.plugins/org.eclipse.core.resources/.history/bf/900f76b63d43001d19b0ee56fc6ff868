@@ -1,0 +1,10 @@
+package exemplo10;
+
+public class Padrao {
+
+	// Vale transporte
+	public void valeTransporte(double salario) {
+		
+	}
+
+}

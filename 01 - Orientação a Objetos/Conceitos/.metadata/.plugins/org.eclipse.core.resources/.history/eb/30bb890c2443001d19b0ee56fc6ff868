@@ -1,0 +1,14 @@
+package exemplo2;
+
+public class Aluno {
+	
+	protected String nome;
+	
+	/*
+	 * DEFAULT:		Não especifica o modificador
+	 * PUBLIC:		Público
+	 * PRIVATE:		Privado - Apenas a própria classe possui acesso
+	 * PROTECTED:	Protegido 
+	 * */
+
+}

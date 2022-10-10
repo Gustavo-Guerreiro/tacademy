@@ -1,0 +1,9 @@
+package exemplo05;
+
+public class Cargo {
+
+	// Atributos
+	private String cargo;
+	private double salario;
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\aluno\Desktop\T-Academy\01 - Orientação a Objetos\Conceitos\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+735409261.index
+282660881.index

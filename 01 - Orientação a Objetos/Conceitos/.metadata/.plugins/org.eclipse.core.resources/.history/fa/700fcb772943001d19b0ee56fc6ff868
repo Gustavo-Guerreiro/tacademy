@@ -1,0 +1,11 @@
+package exemplo04;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		Calculos.soma(6, 8);
+
+	}
+
+}

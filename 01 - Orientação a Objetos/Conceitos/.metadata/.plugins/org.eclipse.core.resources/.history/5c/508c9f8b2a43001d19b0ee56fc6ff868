@@ -1,0 +1,9 @@
+package exemplo05;
+
+public class Colaborador {
+
+	// Atributos
+	private String nome;
+	private int idade;
+	
+}

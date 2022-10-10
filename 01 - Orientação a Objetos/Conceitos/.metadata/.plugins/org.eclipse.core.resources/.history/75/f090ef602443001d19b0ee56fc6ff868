@@ -1,0 +1,16 @@
+package exemplo2;
+
+public class Aluno {
+	
+	/*
+	 * DEFAULT:		Não especifica o modificador
+	 * PUBLIC:		Público
+	 * PRIVATE:		Privado - Apenas a própria classe possui acesso
+	 * PROTECTED:	Protegido 
+	 * */
+	
+	// Atributos
+	private String nome;
+	private double nota1, nota2;
+
+}
