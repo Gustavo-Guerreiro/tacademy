@@ -54,55 +54,55 @@ VALUES
 
 SELECT * FROM colaboradores;
 
-#1
+#1 - Listar o nome do colaborador, nome do cargo e salário.
 SELECT colaboradores.nm_colaborador, nm_cargo, vl_salario FROM colaboradores
     JOIN cargos ON colaboradores.cd_cargo = cargos.cd_cargo;
 
-#2
+#2 - Listar todos os cargos (nome) e a quantidade de colaboradores em cada cargo.
 SELECT nm_cargo, COUNT(nm_colaborador) FROM colaboradores
 JOIN cargos c on c.cd_cargo = colaboradores.cd_cargo GROUP BY nm_cargo;
 
-#3
+#3 - Média salarial por gênero.
 SELECT ds_genero, AVG(vl_salario) from colaboradores
 join cargos c on c.cd_cargo = colaboradores.cd_cargo GROUP BY ds_genero;
 
-#4
+#4 - Listar o nome e a data de nascimento de todos que possuem idade entre 20 e 30 anos.
 SELECT nm_colaborador, dt_nascimento FROM colaboradores
 WHERE DATEDIFF(CURRENT_DATE, dt_nascimento) >= (20*365.25) AND
 DATEDIFF(CURRENT_DATE, dt_nascimento) <= (30*365.25);
 
-#5
+#5 - Quantidade de pessoas que trabalham em cada estado.
 SELECT sg_estado, COUNT(cd_colaborador) FROM colaboradores
 GROUP BY sg_estado;
 
-#6
+#6 - Quantidade de pessoas que trabalham em cada cidade.
 SELECT nm_cidade, COUNT(cd_colaborador) FROM colaboradores
 GROUP BY nm_cidade;
 
-#7
+#7 - Quantidade de mulheres com idade superior a 30 anos e que atuam no estado do Paraná.
 SELECT COUNT(cd_colaborador) FROM colaboradores
-WHERE sg_estado = "PR" &&
+WHERE sg_estado = "PR" AND
 DATEDIFF(CURRENT_DATE, dt_nascimento) >= 30 * 365.25;
 
-#8
+#8 - Média dos salários por cidade.
 SELECT nm_cidade, AVG(vl_salario) AS media FROM colaboradores
 JOIN cargos c on c.cd_cargo = colaboradores.cd_cargo
 GROUP BY nm_cidade;
 
-#9
+#9 - Média dos salários de todos os colaboradores cadastrados.
 SELECT AVG(vl_salario) As media FROM colaboradores
 LEFT JOIN cargos c on colaboradores.cd_cargo = c.cd_cargo;
 
-#10
+#10 - Exibir todos os dados do colaborador mais velho.
 SELECT * FROM colaboradores
 WHERE dt_nascimento = (SELECT MIN(dt_nascimento)
 FROM colaboradores);
 
-#11
+#11 - Exibir a quantidade de pessoas que nasceram na década de 90.
 SELECT COUNT(cd_colaborador) AS quantidade_anos_90 FROM colaboradores
 WHERE dt_nascimento BETWEEN '1990-01-01' AND '1999-12-31';
 
-#12
+#12 - Excluir a tabela.
 DROP TABLE colaboradores;
 DROP TABLE cargos;
 

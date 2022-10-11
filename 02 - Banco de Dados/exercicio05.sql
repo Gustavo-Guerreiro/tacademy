@@ -54,3 +54,60 @@ INSERT INTO produtos
 ("Boné Tommy Jeans", 204.64, 68, 4),
 ("Jaqueta Adidas ECO", 609.98, 116, 2);
 
+SELECT * FROM produtos;
+SELECT * FROM marcas;
+
+#1 - Exiba o nome do produto, nome da marca e o valor do produto.
+SELECT nm_produto, nm_marca, vl_produto FROM produtos
+JOIN marcas m on m.cd_marca = produtos.cd_marca;
+
+#2 - Listar obrigatoriamente todas as marcas e a quantidade de produtos cadastrados por marca.
+SELECT nm_marca, COUNT(cd_produto) FROM marcas
+LEFT JOIN produtos p on marcas.cd_marca = p.cd_marca
+GROUP BY nm_marca;
+
+#3 - Exibir o nome do produto e seu valor em ordem decrescente (do maior valor para o menor).
+SELECT nm_produto, vl_produto FROM produtos
+ORDER BY vl_produto DESC;
+
+#4 - Média dos valores dos produtos por cada marca.
+SELECT nm_marca, AVG(vl_produto) AS media FROM produtos
+JOIN marcas m on m.cd_marca = produtos.cd_marca
+GROUP BY nm_marca;
+
+#5 - Listar nome do produto, valor, nome da marca e quantidade em estoque do produto de maior valor (Haverá dois
+# produtos, os dois terão que ser exibidos).
+SELECT nm_produto, vl_produto, nm_marca, qt_estoque
+FROM produtos JOIN marcas m on m.cd_marca = produtos.cd_marca
+WHERE vl_produto = (SELECT MAX(vl_produto) FROM produtos);
+
+#6 - Listar todos os produtos (exiba todos os dados e converta o código da marca para o nome), onde o estoque esteja
+# entre 500 e 1000 unidades.
+SELECT cd_produto, nm_produto, vl_produto, qt_estoque, nm_marca
+FROM produtos JOIN marcas m on m.cd_marca = produtos.cd_marca
+WHERE qt_estoque BETWEEN 500 AND 1000;
+
+#7 - Listar todos os produtos (nome, valor e estoque) que contenham os termos: Blusa, Camiseta e Camisa. Exiba em
+# ordem decrescente de preço.
+SELECT nm_produto, vl_produto, qt_estoque FROM produtos
+WHERE nm_produto LIKE "%Blusa%" OR nm_produto LIKE "%Camiseta%"
+OR nm_produto LIKE  "%Camisa%" ORDER BY vl_produto DESC;
+
+#8 - Exibir a soma dos valores de cada produto e agrupar por marcas que estejam vinculadas em algum produto.
+SELECT nm_marca, SUM(vl_produto) FROM produtos
+JOIN marcas m on m.cd_marca = produtos.cd_marca
+GROUP BY nm_marca;
+
+#9 - Exibir o nome da marca, onde o produto é o mais caro.
+SELECT nm_marca FROM marcas
+JOIN produtos p on marcas.cd_marca = p.cd_marca
+WHERE vl_produto = (SELECT MAX(vl_produto) FROM produtos);
+
+#10 - Listar todos os produtos (nome e estoque), onde a quantidade em estoque seja maior ou igual a média total do
+# estoque contido na tabela de produtos.
+SELECT nm_produto, qt_estoque FROM produtos
+WHERE qt_estoque > (SELECT AVG(qt_estoque) FROM produtos);
+
+#11 - Excluir todas as tabelas.
+DROP TABLE produtos;
+DROP TABLE marcas;

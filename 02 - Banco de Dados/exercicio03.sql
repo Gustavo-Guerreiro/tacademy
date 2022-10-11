@@ -30,44 +30,45 @@ INSERT INTO alunos (nm_aluno, ds_turma, vl_nota1, vl_nota2, vl_nota3, ds_turno) 
 
 SELECT * FROM alunos;
 
-#1
+#1 - Utilizando condicional IF, retorne o nome do aluno, média e a situação (média 7 ou superior
+# aprovado, caso contrário reprovado).
 SELECT nm_aluno,
 ((vl_nota1 + vl_nota2 + vl_nota3)/3) AS media,
 IF(((vl_nota1 + vl_nota2 + vl_nota3)/3) >= 7,
 "Aprovado", "Reprovado") AS situacao FROM alunos;
 
-#2
+#2 - Exibir a quantidade de alunos por turno, exiba o nome do turno e a quantidade.
 SELECT ds_turno, count(ds_turno) FROM alunos
 GROUP BY ds_turno;
 
-#3
+#3 - Exibir a quantidade de alunos por turma, exiba o nome da turma e a quantidade.
 SELECT ds_turma, count(ds_turma) FROM alunos
 GROUP BY ds_turma;
 
-#4
+#4 - Nome e média de todos os alunos com média maior ou igual a 7.
 SELECT nm_aluno,
 ((vl_nota1 + vl_nota2 + vl_nota3)/3) AS media
 FROM alunos
 WHERE ((vl_nota1 + vl_nota2 + vl_nota3)/3) >= 7;
 
-#5
+#5 - Quantidade de alunos do turno vespertino reprovados.
 SELECT COUNT(*) FROM alunos
 WHERE ((vl_nota1+vl_nota2+vl_nota3)/3) < 7
 AND ds_turno = "VESPERTINO";
 
-#6
+#6 - Nome de todos os alunos com a maior média.
 SELECT nm_aluno FROM alunos WHERE
 ((vl_nota1+vl_nota2+vl_nota3)/3) =
 (SELECT MAX(((vl_nota1+vl_nota2+vl_nota3)/3))
  FROM alunos);
 
-#7
+#7 - Exibir a média de cada turma.
 SELECT ds_turma,
 (AVG((vl_nota1+vl_nota2+vl_nota3)/3)) AS media
 FROM alunos GROUP BY ds_turma;
 
-#8
+#8 - Migrar os alunos da 8B para a 8A.
 UPDATE alunos SET ds_turma = "8A" WHERE ds_turma = "8B";
 
-#9
+#9 - Remover tabela.
 DROP TABLE alunos;
