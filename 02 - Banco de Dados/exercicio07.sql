@@ -175,7 +175,7 @@ WHERE vl_curso >= (SELECT AVG(vl_curso) AS media FROM cursos)
 GROUP BY nm_curso;
 
 SELECT * FROM alunos
-ORDER BY dt_nascimento ASC;
+ORDER BY dt_nascimento;
 
 #13 - Remover todos os alunos com idade superior a 30 anos.
 DELETE FROM alunos WHERE

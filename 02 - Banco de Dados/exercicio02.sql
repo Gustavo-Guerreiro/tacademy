@@ -60,7 +60,7 @@ WHERE vl_produto >= 100 AND vl_produto <= 500;
 #9 - Listar o nome, marca e valor de todos os produtos que sejam mouses, exiba em ordem crescente de preço
 # (do menor para o maior).
 SELECT nm_produto, ds_marca, vl_produto FROM produtos
-WHERE nm_produto = "MOUSE" ORDER BY vl_produto ASC;
+WHERE nm_produto = "MOUSE" ORDER BY vl_produto;
 
 #10 - Exiba o nome do produto e a quantidade de letras.
 SELECT nm_produto, LENGTH(nm_produto) AS quantidade_letras FROM produtos;
