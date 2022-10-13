@@ -104,22 +104,19 @@ INSERT INTO qtd_segmentos VALUES
 # 4 - Crie uma trigger para cadastro, quando efetuado o cadastro de um novo produto (nome do produto e o segmento),
 # a tabela qtd_segmento deverá incrementar aquele determinado segmento.
 CREATE TRIGGER atualizar_qtd_segmentos
-AFTER INSERT ON produtos FOR EACH ROW
-UPDATE qtd_segmentos JOIN produtos ON nome_segmento = segmento_produto
-SET qtd_segmentos.quantidade_segmento = qtd_segmentos.quantidade_segmento + 1
-WHERE nome_segmento = segmento_produto;
+AFTER INSERT ON produtos
+FOR EACH ROW
+    UPDATE qtd_segmentos
+    SET quantidade_segmento = quantidade_segmento + 1
+    WHERE qtd_segmentos.nome_segmento = NEW.segmento_produto;
 
 INSERT INTO produtos (nome_produto, segmento_produto)
 VALUES
 ("Produto 1", "Segmento 1"),
-("Produto 2", "Segemnto 2"),
+("Produto 2", "Segmento 2"),
 ("Produto 3", "Segmento 2");
 
-SELECT * FROM qtd_segmentos;
-
 # 5 - Remove a trigger e as tabelas.
-TRUNCATE TABLE produtos;
-TRUNCATE TABLE qtd_segmentos;
 DROP TRIGGER atualizar_qtd_segmentos;
 DROP TABLE produtos;
 DROP TABLE qtd_segmentos;
