@@ -2,7 +2,6 @@ CREATE DATABASE extra02;
 
 USE extra02;
 
-
 # 1 - Criar uma tabela alunos com a seguinte estrutura:
 # codigo_aluno - Int e PK
 # nome_aluno - Varchar(30) Not Null
@@ -39,6 +38,7 @@ BEGIN
     END IF;
 END;
 
+SELECT * FROM aluno;
 # 4 - Exclua as triggers e em seguida as tabelas.
 DROP TRIGGER calcular_media;
 DROP TRIGGER definir_situacao;
@@ -68,8 +68,6 @@ SET NEW.valor_promocional = NEW.valor_produto*0.9;
 # 3 - Realize uma inserção, informando o nome do produto e o valor.
 INSERT INTO produto (nome_produto, valor_produto)
 VALUES ("Computador", 2000);
-
-SELECT * FROM produto;
 
 # 4 - Remova a trigger e a tabela.
 DROP TRIGGER cadastrar_valor_promocional;
