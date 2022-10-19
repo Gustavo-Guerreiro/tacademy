@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <!-- Exemplo 01 -->
+    <form action="http://proway.com.br">
+        <input type="submit" value="Clique aqui">
+    </form>
+
+    <hr>
+
+    <!-- Exemplo 02 -->
+    <form action="http://proway.com.br">
+        <label>Digite algo:</label>
+        <input type="text">
+
+        <input type="button" value="Funciona só com JS">
+        <input type="reset" value="Limpar Campo">
+    </form>
+
+    <hr>
+
+    <!-- Exemplo 03 -->
+    <form action="http://proway.com.br">
+        <input type="email" required placeholder="E-mail">
+        <input type="color">
+        <input type="date">
+        <input type="password">
+        <input type="file">
+        <input type="submit">
+    </form>
+
+    <!-- Exemplo 04 -->
+    <form action="http://proway.com.br">
+
+        <fieldset>
+            <legend>Turno</legend>
+            
+            <input type="checkbox" id="mt">
+            <label for="mt">Matutino</label>
+
+            <input type="checkbox" id="vp">
+            <label for="vp">Vespertino</label>
+
+            <input type="checkbox" id="nt">
+            <label for="nt">Noturno</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Linguagem</legend>
+
+            <input type="radio" name="linguagem" id="java">
+            <label for="java">Java</label>
+            <input type="radio" name="linguagem" id="csharp">
+            <label for="csharp">C#</label>
+            <input type="radio" name="linguagem" id="python">
+            <label for="python">Python</label>
+        </fieldset>
+
+        <textarea></textarea>
+
+    </form>
+
+</body>
+</html>
