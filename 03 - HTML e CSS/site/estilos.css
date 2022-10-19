@@ -1,7 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+    overflow-x: hidden;
+}
+
 .fundoNavBar {
     background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
 }
 
-.nav-link {
+.nav-link,
+.nav-link:hover {
     color: white;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.destinos {
+    margin-top: 30px;
+}
+
+.destinos p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.destinos .card {
+    padding: 5px;
+    margin-bottom: 10px;
+    transition: box-shadow .3s;
+}
+
+.destinos .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.555);
+}
+
+.principal-contato {
+    padding: 0;
+}
+
+.destino {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 50px;
+    padding: 5rem 5rem;
+    width: 100%;
+}
+
+.fundo-azul {
+    background-color: aliceblue;
+}
+
+.destino:last-child {
+    border-bottom: none;
+}
+
+.destino img {
+    width: 25rem;
+}
+
+.destino h2{
+    line-height: 2em;
+}
+
+.destino p {
+    font-size: 20px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.mapa {
+    width: clamp(100px, 80%, 800px);
+    height: 50rem;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.form-contato {
+    width: clamp(100px, 80%, 800px);
+    margin: auto;
+}
+
+.form-contato label {
+    margin-top: 1.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.form-contato textarea {
+    resize: none;
+}
+
+.form-contato input[type=text], 
+.form-contato input[type=email],
+.form-contato textarea {
+    padding: .5rem;
+} 
+
+.form-contato input[type=text]:focus, 
+.form-contato input[type=email]:focus,
+.form-contato textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.575);
+    outline-color: black;
+} 
+
+.form-contato .btn-enviar {
+    padding: 10px 50px;
+    margin: 50px 0;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    background-color: black;
+}
+
+footer p {
+    color: white;
+    margin-top: 20px;
+    padding: 15px;
+    margin-bottom: 0;
 }
