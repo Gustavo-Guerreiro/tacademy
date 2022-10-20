@@ -1,0 +1,12 @@
+input[type=number] {
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+label {
+    line-height: 2em;
+}
+
+.form-check {
+    padding-left: 40px;
+}

@@ -1,0 +1,26 @@
+h1 {
+    line-height: 3em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+input {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    max-width: 180px;
+}
+
+.form-control {
+    max-width: 800px;
+}
+
+th {
+    text-align: center;
+}

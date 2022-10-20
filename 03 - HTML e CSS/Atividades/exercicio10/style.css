@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+.candidatos {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: auto;
+}
+
+.col-6, .col-12{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 7rem;
+    height: 4rem;
+}
+
+.resultados {
+    margin-top: 50px;
+    text-align: center;
+}

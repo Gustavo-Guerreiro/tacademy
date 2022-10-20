@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cadastro de alunos</h1>
+    <form>
+      <input type="text" placeholder="Nome" class="form-control">
+      <div class="row">
+        <div class="col-6">
+          <input type="number" placeholder="Nota 1" class="form-control">
+        </div>
+        <div class="col-6">
+          <input type="number" placeholder="Nota 2" class="form-control">
+        </div>
+      </div>
+      <select class="form-select">
+        <option selected disabled>Gênero</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+      </select>
+    </form>
+    <div class="container"></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Primeira Nota</th>
+          <th>Segunda Nota</th>
+          <th>Média</th>
+          <th>Situação</th>
+          <th>Gênero</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <section>
+      <p>XX% de homens e XX% de mulheres</p>
+      <p>XX% de aprovados</p>
+      <p>XX% de pessoas em exame</p>
+      <p>XX% de reprovados</p>
+      <p>O(s) aluno(s) com maior média.</p>
+    </section>
+  </div>
+</body>
+</html>

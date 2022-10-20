@@ -1,0 +1,13 @@
+form label {
+    line-height: 3em;
+}
+
+form input[type=button] {
+    margin-top: 20px;
+    padding: .6rem 2rem;
+}
+
+.coluna-botao {
+    display: flex;
+    justify-content: center;
+}

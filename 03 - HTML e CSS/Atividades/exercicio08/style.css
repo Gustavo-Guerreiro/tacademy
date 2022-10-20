@@ -1,0 +1,28 @@
+#tempo {
+    width: 50%;
+    max-width: 200px;
+}
+
+b {
+    font-size: 1.5em;
+    line-height: 5em;
+}
+
+input[type=time] {
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    line-height: 2em;
+}
+
+input[type=radio] {
+    margin-top: 10px;
+}
