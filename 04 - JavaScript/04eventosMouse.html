@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento de Mouse</title>
+
+    <script defer>
+
+        let btn = document.querySelector("#enviar")
+        window.onload( () => {
+            btn.addEventListener('click', enviar())
+        } )
+        function mensagem() {
+            window.alert("Você clicou no botão")
+        }
+
+        function enviar() {
+            //Obter o elemento input
+            let nome = document.querySelector("#nome")
+
+            if (nome.value == '') {
+                alert("Informe um nome")
+            } else if (nome.value.length < 3) {
+                alert("O nome precisa ter pelo menos três caracteres")
+            } else {
+                alert("Nome informado: "+ nome.value)
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="mensagem()">Clique Aqui</button>
+
+    <hr>
+
+    <input type="text" id="nome" placeholder="Informe um Nome">
+    <button id="enviar">Enviar</button>
+</body>
+</html>

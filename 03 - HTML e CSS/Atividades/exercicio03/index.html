@@ -12,21 +12,22 @@
     <link rel="stylesheet" href="style.css">
     
     <title>Selecionar Cidades</title>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <main class="container">
         <h1>Selecionar Cidades</h1>
         <label>
-            <select class="form-select">
+            <select class="form-select" onchange="pegarCidade()">
                 <option selected disabled>Selecione uma cidade</option>
                 <option value="blumenau">Blumenau</option>
                 <option value="pomerode">Pomerode</option>
                 <option value="gaspar">Gaspar</option>
-                <option value="indaial">Indaial</option>
-                <option value="brusque">Brusque</option>
-                <option value="jaragua">Jaraguá do Sul</option>
             </select>
         </label>
+        <h2>Descrição:</h2>
+        <p id="descricao">Selecione uma cidade para saber a descrição</p>
     </main>
 </body>
 </html>

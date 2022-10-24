@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Conversão</title>
+
+  <script src="script.js"></script>
 </head>
 <body>
   <form action="" class="container">
@@ -19,7 +21,7 @@
         <br>
         <input type="number" id="valor" class="form-control">
       </div>
-      <div class="col-12 form-check">
+      <div class="col-12 form-check" onclick="converter()">
         <input type="radio" class="form-check-input" name="conversao" id="dolar_real">
         <label for="dolar_real">Dólar para Real</label>
         <br>
@@ -46,7 +48,7 @@
 
       </div>
       <div class="col-6 form-check">
-
+        <p id="valorFinal"></p>
       </div>
     </div>
   </form>

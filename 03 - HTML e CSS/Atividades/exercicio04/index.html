@@ -10,58 +10,60 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Lanchonete</title>
+
+  <script src="script.js"></script>
 </head>
 <body>
   <main class="container">
-      <h1>Marque o que deseja</h1>
+      <h1 onclick="calcularValor()" id="teste">Marque o que deseja</h1>
       <form>
         <div class="row">
           <div class="col-6">
             <div class="card">
                 <img src="imagens/lasanha.webp" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="lasanha">Lasanha</label>
-                <input type="checkbox" id="lasanha">
+                <input type="checkbox" id="lasanha" value="30">
               </div>
             </div>
             <br>
             <div class="card">
               <img src="imagens/pizza.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="pizza">Pizza</label>
-                <input type="checkbox" id="pizza">
+                <input type="checkbox" id="pizza" value="50">
               </div>
             </div>
             <br>
             <div class="card">
               <img src="imagens/paodequeijo.jpeg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="paoqueijo">Pão de Queijo</label>
-                <input type="checkbox" id="paoqueijo">
+                <input type="checkbox" id="paoqueijo" value="10">
               </div>
             </div>
             <br>
             <div class="card">
               <img src="imagens/fritas.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="fritas">Fritas</label>
-                <input type="checkbox" id="fritas">
+                <input type="checkbox" id="fritas" value="30">
               </div>
             </div>
             <br>
             <div class="card">
               <img src="imagens/xbacon.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="xbacon">X-Bacon</label>
-                <input type="checkbox" id="xbacon">
+                <input type="checkbox" id="xbacon" value="35">
               </div>
             </div>
             <br>
             <div class="card">
               <img src="imagens/xsalada.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="xsalada">X-Salada</label>
-                <input type="checkbox" id="xsalada">
+                <input type="checkbox" id="xsalada" value="40">
               </div>
             </div>
             <br>
@@ -72,61 +74,62 @@
 
             <div class="card">
               <img src="imagens/bauru.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="bauru">Baurú</label>
-                <input type="checkbox" id="bauru">
+                <input type="checkbox" id="bauru" value="20">
               </div>
             </div>
             <br>
 
             <div class="card">
               <img src="imagens/sanduiche.webp" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="sanduichenatural">Sanduíche Natural</label>
-                <input type="checkbox" id="sanduichenatural">
+                <input type="checkbox" id="sanduichenatural" value="10">
               </div>
             </div>
             <br>
 
             <div class="card">
               <img src="imagens/especial.webp" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="especialcasa">Especial da Casa</label>
-                <input type="checkbox" id="especialcasa">
+                <input type="checkbox" id="especialcasa" value="100">
               </div>
             </div>
             <br>
 
             <div class="card">
               <img src="imagens/frango.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="frango">Frango a Passarinho</label>
-                <input type="checkbox" id="frango">
+                <input type="checkbox" id="frango" value="25">
               </div>
             </div>
             <br>
 
             <div class="card">
               <img src="imagens/suco.png" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="suco">Suco</label>
-                <input type="checkbox" id="suco">
+                <input type="checkbox" id="suco" value="10">
               </div>
             </div>
             <br>
 
             <div class="card">
               <img src="http://i.mlcdn.com.br/portaldalu/fotosconteudo/43225.jpg" alt="...">
-              <div>
+              <div onclick="calcularValor()">
                 <label for="refri">Refrigerante</label>
-                <input type="checkbox" id="refri">
+                <input type="checkbox" id="refri" value="10">
               </div>
             </div>
             <br>
         </div>
           <div class="col-12">
-            <p class="total">Total: R$X.XX</p>
+            <p id="total">Total: R$X.XX</p>
           </div>
+        </div>
       </form>
   </main>
 </body>
