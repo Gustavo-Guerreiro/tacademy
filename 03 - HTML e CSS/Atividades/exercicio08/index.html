@@ -10,31 +10,36 @@
 
   <link rel="stylesheet" href="style.css">
   <title>Conversor Tempo</title>
+
+  <script src="script.js"></script>
 </head>
 <body>
   <main class="container">
     <form class="form">
 
-      <label for="tempo"><b>Insira a hora</b></label>
+      <label for="tempo" "><b>Insira a hora</b></label>
       <input type="time" id="tempo" class="form-control">
 
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="cidade" id="lisboa">
+      <div class="form-check" onclick="converterHora()">
+        <input class="form-check-input" type="radio" value="Europe/Lisbon" name="cidade" id="lisboa">
         <label class="form-check-label" for="lisboa">Lisboa</label>
         <br>
-        <input class="form-check-input" type="radio" name="cidade" id="ny">
+        <input class="form-check-input" type="radio" value="America/New_York" name="cidade" id="ny">
         <label class="form-check-label" for="ny">Nova Iorque</label>
         <br>
-        <input class="form-check-input" type="radio" name="cidade" id="mexico">
+        <input class="form-check-input" type="radio" value="America/Mexico_City" name="cidade" id="mexico">
         <label class="form-check-label" for="mexico">Cidade do México</label>
         <br>
-        <input class="form-check-input" type="radio" name="cidade" id="tokyo">
+        <input class="form-check-input" type="radio" value="Asia/Tokyo" name="cidade" id="tokyo">
         <label class="form-check-label" for="tokyo">Tóquio</label>
         <br>
-        <input class="form-check-input" type="radio" name="cidade" id="berlin">
+        <input class="form-check-input" type="radio" value="Europe/Berlin" name="cidade" id="berlin">
         <label class="form-check-label" for="berlin">Berlim</label>
       </div>
     </form>
+    <p id="hora">
+
+    </p>
   </main>
 </body>
 </html>

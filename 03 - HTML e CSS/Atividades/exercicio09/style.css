@@ -6,6 +6,10 @@ h1 {
     padding-bottom: 20px;
     border-bottom: 1px solid black;
 }
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -17,4 +21,14 @@ form {
     width: 50%;
     max-width: 200px;
     margin: 10px 0 40px;
+}
+
+#tabuada {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+#tabuada li {
+    line-height: 2em;
 }

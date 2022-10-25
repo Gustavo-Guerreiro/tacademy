@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" href="style.css">
   <title>Menor Número</title>
+
+  <script src="script.js"></script>
 </head>
 <body>
   <main class="container">
@@ -30,10 +32,14 @@
       </div>
       <div class="row">
         <div class="col coluna-botao">
-          <input type="button" value="Comparar" class="btn btn-dark">
+          <input type="button" value="Comparar" class="btn btn-dark" onclick="descobrirMenor()">
+
         </div>
       </div>
     </form>
+    <p id="menor">
+
+    </p>
   </main>
 </body>
 </html>

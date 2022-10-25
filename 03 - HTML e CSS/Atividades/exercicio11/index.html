@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Produtos</title>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <main class="container">
         <h1>Cadastrar Produto</h1>
-        <form>
-            <input type="text" class="form-control" placeholder="Nome:">
-            <input type="text" class="form-control" placeholder="Marca:">
-            <input type="number" class="form-control" placeholder="Valor:">
+        <form onsubmit="addRegistro()">
+            <input type="text" class="form-control" placeholder="Nome:" id="nome">
+            <input type="text" class="form-control" placeholder="Marca:" id="marca">
+            <input type="number" class="form-control" placeholder="Valor:" id="valor">
             <input type="submit" class="btn btn-dark" value="Cadastrar">
         </form>
         <table class="table">
@@ -30,20 +32,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
-            <tfoor>
+            <tfoot>
                 <tr>
                     <td colspan="3">
-                        X registros feitos.
+                        0 registros feitos.
                     </td>
-
                 </tr>
-            </tfoor>
+            </tfoot>
         </table>
     </main>
 </body>

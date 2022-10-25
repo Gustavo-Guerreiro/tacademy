@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Tabuada</title>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <main class="container">
@@ -18,33 +20,34 @@
         <div class="candidatos">
             <div class="row">
                 <div class="col-6">
-                    <button class="btn btn-dark">Candidato 1</button>
+                    <button class="btn btn-dark" onclick="addCandidato1()">Candidato 1</button>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-dark">Candidato 2</button>
+                    <button class="btn btn-dark" onclick="addCandidato2()">Candidato 2</button>
                 </div>
             </div><div class="row">
                 <div class="col-6">
-                    <button class="btn btn-dark">Candidato 3</button>
+                    <button class="btn btn-dark" onclick="addCandidato3()">Candidato 3</button>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-dark">Candidato 4</button>
+                    <button class="btn btn-dark" onclick="addCandidato4()">Candidato 4</button>
                 </div>
             </div><div class="row">
                 <div class="col-12">
-                    <button class="btn btn-dark">Nulo</button>
+                    <button class="btn btn-dark" onclick="addNulo()">Nulo</button>
                 </div>
             </div>
         </div>
 
         <div class="resultados">
-            <p>O candidato 1 obteve X votos.</p>
-            <p>O candidato 2 obteve X votos.</p>
-            <p>O candidato 3 obteve X votos.</p>
-            <p>O candidato 4 obteve X votos.</p>
-            <p>Houveram X votos nulos.</p>
-            <p>No total houveram X votos.</p>
+            <p id="candidato1">O candidato 1 obteve 0 votos.</p>
+            <p id="candidato2">O candidato 2 obteve 0 votos.</p>
+            <p id="candidato3">O candidato 3 obteve 0 votos.</p>
+            <p id="candidato4">O candidato 4 obteve 0 votos.</p>
+            <p id="nulo">Houveram 0 votos nulos.</p>
+            <p id="total">No total houveram 0 votos.</p>
             <p>O(s) candidato(s) que recebeu(ram) mais votos.</p>
+            <ul id="vencedores"></ul>
         </div>
     </main>
 </body>

@@ -3,6 +3,12 @@
     max-width: 200px;
 }
 
+#hora {
+    text-align: center;
+    font-size: larger;
+    margin-top: 20px;
+}
+
 b {
     font-size: 1.5em;
     line-height: 5em;
