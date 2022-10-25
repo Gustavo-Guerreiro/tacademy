@@ -77,7 +77,7 @@ function selecionar() {
         let col3 = linha.insertCell(2)
         let col4 = linha.insertCell(3)
 
-        // Conteúdo das colunas
+        // Conteúdos das colunas
         col1.innerHTML = i+1
         col2.innerHTML = dados[i].nome
         col3.innerHTML = dados[i].cidade

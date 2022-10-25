@@ -37,6 +37,14 @@ th {
     text-align: center;
 }
 
+td {
+    text-align: center;
+}
+
 li {
     max-width: 700px;
+}
+
+.esconder {
+    display: none;
 }
