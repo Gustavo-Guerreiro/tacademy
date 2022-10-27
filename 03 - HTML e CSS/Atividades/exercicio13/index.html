@@ -11,22 +11,24 @@
   <link rel="stylesheet" href="style.css">
 
   <title>Cadastro</title>
+
+  <script src="script.js"></script>
 </head>
 
 <body>
   <div class="container">
     <h1>Cadastro de alunos</h1>
     <form>
-      <input type="text" placeholder="Nome" class="form-control">
+      <input type="text" placeholder="Nome" class="form-control" id="nome">
       <div class="row">
         <div class="col-6">
-          <input type="number" placeholder="Nota 1" class="form-control">
+          <input type="number" placeholder="Nota 1" class="form-control" id="nota1">
         </div>
         <div class="col-6">
-          <input type="number" placeholder="Nota 2" class="form-control">
+          <input type="number" placeholder="Nota 2" class="form-control" id="nota2">
         </div>
       </div>
-      <select class="form-select">
+      <select class="form-select" id="genero">
         <option selected disabled>Gênero</option>
         <option value="masculino">Masculino</option>
         <option value="feminino">Feminino</option>
@@ -55,10 +57,10 @@
       </tbody>
     </table>
     <section>
-      <p>XX% de homens e XX% de mulheres</p>
-      <p>XX% de aprovados</p>
-      <p>XX% de pessoas em exame</p>
-      <p>XX% de reprovados</p>
+      <p>0% de homens e 0% de mulheres</p>
+      <p>0% de aprovados</p>
+      <p>0% de pessoas em exame</p>
+      <p>0% de reprovados</p>
       <p>O(s) aluno(s) com maior média.</p>
     </section>
   </div>

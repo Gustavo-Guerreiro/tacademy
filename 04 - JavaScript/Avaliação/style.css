@@ -1,0 +1,164 @@
+.navbar {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .navbar-brand{
+    font-size: 2em;
+}
+
+.navbar .navbar-collapse ul li {
+    font-size: 1.2em;
+}
+
+.carrinho img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    transition: transform .3s;
+}
+
+.carrinho img:hover {
+    transform: scale(1.1);
+}
+
+main h1 {
+    text-align: center;
+    line-height: 3em;
+}
+
+.card {
+    width: 20rem;
+    height: 35rem;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card h4 {
+    font-size: 1.6em;
+}
+
+.card h5 {
+    line-height: 1.5em;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.53);
+    transform: scale(1.01);
+}
+
+
+.card .card-title {
+    font-size: 2em;
+}
+
+.card .card-text {
+    font-size: 1.4em;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.card .btn {
+    width: 9rem;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3%;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto 300px;
+}
+
+#mainMenu select{
+    width: clamp(100px, 80%, 700px);
+    text-align: center;
+    line-height: 2em;
+    margin: auto auto 25px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+}
+
+.card-header p {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card-header p:hover {
+    transform: scale(1.1);
+}
+
+#mainCarrinho {
+    width: 80%;
+    margin: auto auto 100px;
+}
+
+#mainCarrinho h1{
+    text-align: center;
+}
+
+#mainCarrinho .produtos-grid{
+    margin: auto;
+}
+
+#mainCarrinho .produtos-grid h1 {
+    grid-column: 2;
+}
+
+#mainCarrinho .card {
+    height: 40rem;
+    display: flex;
+}
+
+#mainCarrinho .form-control {
+    width: clamp(100px, 80%, 300px);
+    margin: auto auto 20px;
+    text-align: center;
+}
+
+#valorFinal {
+    grid-column: 3;
+    margin: auto;
+    width: 100%;
+}
+
+#valorFinal p{
+    font-size: 1.7em;
+}
+
+#valorFinal button {
+    font-size: 1.3em;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1040px) {
+    .produtos-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .carrinho img {
+        margin-bottom: 10px;
+    }
+    #valorFinal {
+        grid-column: 2;
+    }
+}
