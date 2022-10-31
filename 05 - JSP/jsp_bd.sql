@@ -9,4 +9,7 @@ create table pessoas(
     idade int
 );
 
+delete from pessoas where nome like 'Jacinto';
+
+
 select * from pessoas;
