@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\Gustavo.Guerreiro\Desktop\Tentar JSP\Blog\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2465009854.index
+\Blog\src\main\java
+C:\Users\Gustavo.Guerreiro\Desktop\Tentar JSP\Blog\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2179782412.index
+\src\src\main\java

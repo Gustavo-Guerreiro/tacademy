@@ -22,8 +22,3 @@ create table comentario (
     primary key (cd_comentario),
     foreign key (cd_postagem) references postagem(cd_postagem)
 );
-
-SELECT * FROM postagem;
-
-
-
