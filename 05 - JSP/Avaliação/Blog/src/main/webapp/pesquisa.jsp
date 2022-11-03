@@ -100,8 +100,10 @@
 		pstmt.setString(1, termo);
 		
 		ResultSet rs = pstmt.executeQuery();
-		
-		while(rs.next()) {
+
+        int qtdResultados = 0;
+
+        while(rs.next()) {
 	%>
 	
 	
@@ -118,7 +120,13 @@
     
     
     <%
+        qtdResultados++;
 	}
+        if (qtdResultados == 0) {
+    %>
+    <p class="text-center">Nenhum resultado encontrado</p>
+    <%
+        }
     %>
 </main>
 </body>
