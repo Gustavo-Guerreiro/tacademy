@@ -91,7 +91,6 @@
 	Conexao c = new Conexao();
 
     int cd_postagem = Integer.parseInt(request.getParameter("cd_postagem"));
-
 	
 	String sql = "SELECT * FROM postagem WHERE cd_postagem = ?";
 	

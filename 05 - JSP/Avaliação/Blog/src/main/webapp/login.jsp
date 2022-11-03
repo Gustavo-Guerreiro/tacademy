@@ -33,7 +33,7 @@
                     if (session.getAttribute("tipo") == null) {
                 %>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.jsp">
+                    <a class="nav-link active" href="login.jsp">
                         Login
                     </a>
                 </li>

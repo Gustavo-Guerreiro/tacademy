@@ -62,7 +62,7 @@
                         if (session.getAttribute("tipo").equals("A")) {
                 %>
                 <li class="nav-item">
-                    <a class="nav-link" href="analiseComentarios.jsp">Analisar Comentários</a>
+                    <a class="nav-link active" href="analiseComentarios.jsp">Analisar Comentários</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="analiseUsuarios.jsp">Gerenciar Perfis</a>
@@ -112,7 +112,8 @@
             </div>
             <div class="card-body">
                 <p class="card-text"><% out.print(rs.getString(5)); %></p>
-                <p class="card-text">Comentário feito em:</p>
+                <hr>
+                <p class="card-text">Comentário feito na publicação:</p>
                 <h5 class="card-title"> <% out.print(rs.getString(3)); %> </h5>
                 <p class="card-text"> De <% out.print(rs.getString(2)); %> </p>
                 <a href="postagemCompleta.jsp?cd_postagem=<%out.print(rs.getString(1));%>" class="btn btn-outline-primary">

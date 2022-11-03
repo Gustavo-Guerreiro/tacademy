@@ -64,6 +64,9 @@
         <li class="nav-item">
           <a class="nav-link" href="analiseComentarios.jsp">Analisar Comentários</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="analiseUsuarios.jsp">Gerenciar Perfis</a>
+        </li>
         <%
           }
         %>

@@ -49,7 +49,7 @@
             if (session.getAttribute("tipo").equals("U")) {
         %>
         <li class="nav-item">
-          <a class="nav-link" href="perfil.jsp">Meu Perfil</a>
+          <a class="nav-link active" href="perfil.jsp">Meu Perfil</a>
         </li>
         <%
             }
