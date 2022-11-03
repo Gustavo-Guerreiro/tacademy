@@ -88,7 +88,7 @@
 <main>
   <h2>Usuários</h2>
   <%
-
+  if (session.getAttribute("tipo") != null) {
   if (session.getAttribute("tipo").toString().equals("A")) {
     Conexao c = new Conexao();
 
@@ -133,6 +133,7 @@
     </div>
   </div>
   <% }
+  }
   } else {
     response.sendRedirect("index.jsp");
   }

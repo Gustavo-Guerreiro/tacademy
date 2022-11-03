@@ -8,21 +8,20 @@
 <body>
 
 <%
-  if(session.getAttribute("tipo").toString().equals("A")) {
-    Conexao c = new Conexao();
+  if (session.getAttribute("tipo") != null) {
+    if(session.getAttribute("tipo").toString().equals("A")) {
+      Conexao c = new Conexao();
 
-    String sql = "UPDATE usuario SET fg_banido = 'N' WHERE cd_usuario = ?";
+      String sql = "UPDATE usuario SET fg_banido = 'N' WHERE cd_usuario = ?";
 
-    PreparedStatement pstmt = c.efetuarConexao().prepareStatement(sql);
+      PreparedStatement pstmt = c.efetuarConexao().prepareStatement(sql);
 
-    pstmt.setInt(1, Integer.parseInt(request.getParameter("cd_usuario")));
+      pstmt.setInt(1, Integer.parseInt(request.getParameter("cd_usuario")));
 
-    pstmt.execute();
+      pstmt.execute();
 
-    response.sendRedirect("analiseUsuarios.jsp");
-%>
-
-<%
+      response.sendRedirect("analiseUsuarios.jsp");
+    }
   } else {
     response.sendRedirect("index.jsp");
   }

@@ -15,31 +15,32 @@
 
 		String usuario = request.getParameter("cd_usuario");
 
+		if (session.getAttribute("tipo") != null) {
+			if (session.getAttribute("tipo").toString().equals("A") ||
+					session.getAttribute("cdUsuario").toString().equals(usuario)) {
+				String nome = request.getParameter("nome");
+				String titulo = request.getParameter("titulo");
+				String postagem = request.getParameter("postagem");
 
-		if (session.getAttribute("tipo").toString().equals("A") ||
-		session.getAttribute("cdUsuario").toString().equals(usuario) ) {
-			String nome = request.getParameter("nome");
-			String titulo = request.getParameter("titulo");
-			String postagem = request.getParameter("postagem");
+				// Efetuar conexão
+				Conexao c = new Conexao();
 
-			// Efetuar conexão
-			Conexao c = new Conexao();
+				// SQL
 
-			// SQL
+				String sql = "UPDATE postagem SET nm_cliente = ?, ds_titulo = ?, ds_mensagem = ? WHERE cd_postagem = ?";
 
-			String sql = "UPDATE postagem SET nm_cliente = ?, ds_titulo = ?, ds_mensagem = ? WHERE cd_postagem = ?";
+				// PreparedStatement
+				PreparedStatement pstmt = c.efetuarConexao().prepareStatement(sql);
 
-			// PreparedStatement
-			PreparedStatement pstmt = c.efetuarConexao().prepareStatement(sql);
+				// Passar os parâmetros para o SQL
+				pstmt.setString(1, nome);
+				pstmt.setString(2, titulo);
+				pstmt.setString(3, postagem);
+				pstmt.setInt(4, codigo);
 
-			// Passar os parâmetros para o SQL
-			pstmt.setString(1, nome);
-			pstmt.setString(2, titulo);
-			pstmt.setString(3, postagem);
-			pstmt.setInt(4, codigo);
-
-			// Executar o comando SQL
-			pstmt.execute();
+				// Executar o comando SQL
+				pstmt.execute();
+			}
 		}
 		// Redirecionar
 		response.sendRedirect("index.jsp");

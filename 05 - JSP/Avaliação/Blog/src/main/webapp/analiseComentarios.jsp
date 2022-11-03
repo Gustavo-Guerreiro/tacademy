@@ -88,6 +88,13 @@
 <main>
     <h2>Comentários</h2>
     <%
+        if (session.getAttribute("tipo") == null) {
+            response.sendRedirect("index.jsp");
+        } else {
+            if (!session.getAttribute("tipo").equals("A")){
+                response.sendRedirect("index.jsp");
+            }
+        }
         Conexao c = new Conexao();
 
         String sql =

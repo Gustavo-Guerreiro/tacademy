@@ -86,21 +86,22 @@
 
 
 <main id="mainPostagemCompleta">
-	<% 
-	
-	Conexao c = new Conexao();
+	<%
+    if (request.getParameter("cd_postagem") != null) {
 
-    int cd_postagem = Integer.parseInt(request.getParameter("cd_postagem"));
-	
-	String sql = "SELECT * FROM postagem WHERE cd_postagem = ?";
-	
-	PreparedStatement pstmt = c.efetuarConexao().prepareStatement(sql);
-	
-	pstmt.setInt(1, cd_postagem);
-	
-	ResultSet rs = pstmt.executeQuery();
-	
-	if(rs.next()){
+        Conexao c = new Conexao();
+
+        int cd_postagem = Integer.parseInt(request.getParameter("cd_postagem"));
+
+        String sql = "SELECT * FROM postagem WHERE cd_postagem = ?";
+
+        PreparedStatement pstmt = c.efetuarConexao().prepareStatement(sql);
+
+        pstmt.setInt(1, cd_postagem);
+
+        ResultSet rs = pstmt.executeQuery();
+
+        if(rs.next()){
 	
 	%>
 	
@@ -113,9 +114,9 @@
       <p class="card-text"> <% out.print(rs.getString(4)); %> </p>
         <%
 
-        if (session.getAttribute("tipo") != null && session.getAttribute("cdUsuario") != null) {
+            if (session.getAttribute("tipo") != null && session.getAttribute("cdUsuario") != null) {
 
-            if (session.getAttribute("tipo").toString().equals("A") || Integer.parseInt(session.getAttribute("cdUsuario").toString() ) == rs.getInt(6)) {
+                if (session.getAttribute("tipo").toString().equals("A") || Integer.parseInt(session.getAttribute("cdUsuario").toString() ) == rs.getInt(6)) {
         %>
             <a href="alteracaoPostagem.jsp?cd_postagem=<% out.print(rs.getInt(1)); %>" class="btn btn-outline-warning">Alterar</a>
             <a href="removerPostagem.jsp?cd_postagem=<% out.print(rs.getInt(1)); %>" class="btn btn-outline-danger" >Remover</a>
@@ -196,6 +197,9 @@
 %>
     <p class="text-center">Ainda não há comentários</p>
 <%
+    }
+    } else {
+        response.sendRedirect("index.jsp");
     }
   %>
 </main>
