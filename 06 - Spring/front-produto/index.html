@@ -20,6 +20,19 @@
 </head>
 <body>
 
+    <!-- Formulário -->
+    <form>
+        <input type="hidden" id="codigo">
+
+        <input type="text" id="nome" placeholder="Nome do produto" class="form-control">
+
+        <input type="number" id="valor" placeholder="Valor do produto" class="form-control">
+
+        <input type="button" value="Cadastrar" onclick="cadastrar()" id="btnCadastrar" class="btn btn-primary">
+        <input type="button" value="Alterar"   onclick="alterar()"   id="btnAlterar"   class="btn btn-warning">
+        <input type="button" value="Remover"   onclick="remover()"   id="btnRemover"   class="btn btn-danger">
+    </form>
+
     <table class="table table-striped">
         <thead>
             <tr>
