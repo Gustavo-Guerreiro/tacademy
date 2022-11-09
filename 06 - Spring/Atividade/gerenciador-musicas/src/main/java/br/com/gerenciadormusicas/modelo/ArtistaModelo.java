@@ -5,7 +5,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.List;
 
@@ -26,5 +25,6 @@ public class ArtistaModelo {
     @OneToMany
     @JoinColumn(name = "cd_artista")
     private List<MusicaModelo> musicas;
+
 
 }

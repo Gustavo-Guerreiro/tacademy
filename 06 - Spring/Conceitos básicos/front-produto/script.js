@@ -5,7 +5,6 @@ let vetor = [];
 window.onload = function(){
     // Armazenar produtos no vetor e listar
     obterProdutos()
-
 }
 
 // Obter todos os produtos

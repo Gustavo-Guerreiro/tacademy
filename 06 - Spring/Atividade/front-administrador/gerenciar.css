@@ -1,0 +1,23 @@
+main form {
+    margin: 20px auto auto;
+    width: clamp(100px, 80%, 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 3em;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+main form input[type="submit"], input[type="button"] {
+    width: 150px;
+    margin: auto;
+}
+
+main form input[type="button"] {
+    display: none;
+}
+
+main #listaArtistas, main #listaMusicas {
+    width: clamp(100px, 80%, 700px);
+    margin: 30px auto auto;
+}
