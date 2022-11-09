@@ -1,7 +1,5 @@
 let vetor = []
 
-let vetorPesquisa = []
-
 window.onload = function (){
     obterArtistas()
 }
